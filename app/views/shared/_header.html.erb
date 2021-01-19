@@ -14,10 +14,13 @@
       <li><%= link_to 'Categoty', "#", class: "brand-list" %></li>
     </ul>
     <ul class='lists-right'>
-      <%#<li><%= link_to "# さん", '#', class: "user-nickname" %></li>
-      <%#<li><%= link_to 'Log Out', root_path, method: :delete, class: "logout" %></li> 
-      <li><%= link_to 'Log In', root_path, class: "login" %></li>
-      <li><%= link_to 'Sign Up', root_path, class: "sign-up" %></li>
+     <% if user_signed_in? %>
+      <li><%= link_to "#{current_user.nickname}さん", '#', class: "user-nickname" %></li>
+      <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+      <% else %>
+      <li><%= link_to 'Log In', new_user_session_path, class: "login" %></li>
+      <li><%= link_to 'Sign Up', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
     </ul>
   </div>
 </header>

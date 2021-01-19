@@ -1,0 +1,21 @@
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-yellow-btn {
+  width: 100%;
+  background: #FFD700;
+  border: 1px solid #FFD700;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius:30px;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
